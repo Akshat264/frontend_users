@@ -1,0 +1,93 @@
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3vh;
+  padding: 1vh;
+}
+
+.filter_input {
+  height: 5vh;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5vh 1vw;
+  border-radius: 25px;
+}
+
+.apply_filter_btn,
+.create_team_btn,
+.create_btn {
+  height: 6vh;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 1vh;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  font-size: 2.5vh;
+}
+
+.apply_filter_btn {
+  background-color: brown;
+  color: white;
+}
+
+.create_team_btn {
+  background-color: rgb(5, 44, 237);
+  color: white;
+}
+
+.create_btn {
+  background-color: rgb(54, 121, 46);
+  color: white;
+  margin-top: auto;
+}
+
+.input_team_name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(176, 176, 234);
+  padding: 1vh 1vw;
+  margin-top: 1vh;
+}
+
+.input_team_name span label,
+.label {
+  color: black;
+  font-weight: 700;
+  margin-bottom: 0.5vh;
+}
+
+.label {
+  margin-left: 1.5vw;
+}
+
+.team_name {
+  padding: 1vh 1vw;
+}
+
+.team_name:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 790px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter_input,
+  .apply_filter_btn,
+  .create_team_btn,
+  .create_btn,
+  .input_team_name,
+  .team_name {
+    width: 100%;
+  }
+  .input_team_name {
+    flex-direction: column;
+  }
+}

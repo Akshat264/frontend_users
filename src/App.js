@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import { ReactDOM } from "react";
+import Body from "./Components/body";
+import Navigation from "./Components/nav";
+import axios from "axios";
 function App() {
+  const [data, setData] = useState([]);
+  const handleSearch = async (query) => {
+    if (query !== "") {
+      try {
+        const response = await axios.get(
+          `http://${process.env.REACT_APP_URL}/api/users?search=${query}`
+        );
+        setData(response.data);
+      } catch (error) {
+        console.error("Error searching data:", error);
+      }
+    }
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation handlesearch={handleSearch} />
+      <Body searcheddata={data} setSearch={setData} />
     </div>
   );
 }

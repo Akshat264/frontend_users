@@ -1,0 +1,65 @@
+.backtohome {
+  margin-right: 2vw;
+  background-color: rgb(6, 124, 28);
+  padding: 1vh 2vw 1vh 2vw;
+  border-radius: 7px;
+}
+.backtohome[href] {
+  color: white;
+  text-decoration: none;
+}
+.team_card {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(145, 230, 71);
+  text-align: center;
+  padding: 20px;
+  height: 40vh;
+}
+.teams {
+  display: flex;
+  margin-top: 5vh;
+  flex-wrap: wrap;
+  gap: 2.5vw;
+  justify-content: space-evenly;
+}
+.team-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.members_team {
+  height: 100%;
+  overflow-y: scroll;
+}
+.member_team {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar_team {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.member-info_team {
+  text-align: left;
+}
+
+.member-name_team {
+  font-weight: bold;
+}
+
+.member-email_team {
+  color: #555;
+}
+
+.member-domain_team {
+  font-style: italic;
+}

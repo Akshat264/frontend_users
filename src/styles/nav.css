@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #333;
+  top: 0;
+  width: 92.5%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 4vw;
+  overflow: hidden;
+}
+
+.navbar h2 {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  margin: 0;
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 8px;
+  width: 15vw;
+  max-width: 200px; /* Limit maximum width for better responsiveness */
+}
+
+.search-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #44b848;
+  color: white;
+}
+
+.title {
+  order: 1;
+}
+
+.search-box {
+  order: 2;
+  display: flex;
+  align-items: center;
+}
+
+.teams_link {
+  margin-right: 2vw;
+  background-color: rgb(6, 124, 28);
+  padding: 1vh 2vw;
+  border-radius: 7px;
+}
+
+.teams_link > a[href] {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: none; /* Reset max-width for better responsiveness */
+  }
+}
